@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.bgcY{background:#ffcc33}
+.bgcG{background: gainsboro;}
+#signBg {
+    background: url(../img/signupbcg.jpg) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.sign{
+        width: 700px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.sign-item{height: 35px; width: 350px;float: left; text-align: center;color: #fff; line-height: 35px; display: block;}
+.signBox{width:450px; height: 280px;margin-top: 50px;}
+.modal-footer button{width: 50%; background: #ffcc33; border-color: #ffcc33; margin-top: 20px;}
