@@ -252,8 +252,7 @@
                         最后，我觉得运维工程师还是会向自动化运维或者devops行业发展。掌握一门语言得开发能力会是将来谋求长远发展得关键。
                     </p>
                     <a href="">
-                        <p class="text-right fs14">了解详情
-                            <<</p>
+                        <p class="text-right fs14">了解详情>> </p>
                     </a>
 
                     <hr>
@@ -337,7 +336,7 @@
     </div></template>
 
 <script>
-let indexData=require('../assets/js/mock/indexData.json');
+let indexData=require('../../static/mock/indexData.json');
 export default {
   name: 'Index',
   data () {

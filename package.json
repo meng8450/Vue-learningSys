@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "dplayer": "^1.22.2",
+    "npm": "^6.0.1",
     "vue": "^2.5.2",
     "vue-dplayer": "0.0.9",
+    "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

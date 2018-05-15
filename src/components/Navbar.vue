@@ -10,12 +10,12 @@
                 </div>
                 <div class="modal-body">
                     <form method="GET">
-                        <input type="text" class="form-control" placeholder="邮箱/账号/手机号">
-                        <input type="text" class="form-control" placeholder="6-12位密码，不可用空格，区分大小写">
+                        <input type="text" class="form-control" placeholder="邮箱/账号/手机号" v-model='username'>
+                        <input type="password" class="form-control" placeholder="6-12位密码，不可用空格，区分大小写" v-model='password'>
                     </form>
                 </div>
                 <div class="modal-footer"> 
-                    <button type="button" class="btn btn-success">登录</button>
+                    <button type="button" class="btn btn-default" @click='userLogin(username,password)'>登录</button>
                 </div>
             </div>
         </div>
@@ -50,11 +50,21 @@
                 </form>
             </div>
         </form>
-        <img id="userPhoto" src="/static/img/photo.png" class="img-circle"/>
-        <div class="login">
-            <a href="#" data-toggle="modal" data-target="#myModal">登录</a>
-            <a>/</a>
-            <a href="signup.html">注册</a>
+        <div  v-show="!isLogin">
+            <img id="userPhoto" src="/static/img/photo.png" class="img-circle"/>
+            <div class="login">
+                <a href="#" data-toggle="modal" data-target="#myModal">登录</a>
+                <a>/</a>
+                <a href="#/stusignup">注册</a>
+            </div>
+        </div>
+        <div  v-show="isLogin">
+            <img id="userPhoto" :src="picUrl" class="img-circle"/>
+            <div class="login">
+                <a href="#" data-toggle="modal" data-target="#myModal">{{nickname}}</a>
+                 <a>/</a>
+                <a href="#" @click="userExit()">退出</a>
+            </div>
         </div>
     </div>
  </div>
@@ -63,7 +73,7 @@
 <script>
 import Vue from 'Vue'
 export default {
-  name: 'HelloWorld',
+  name: 'Navbar',
   data () {
     return {
       navBar:[{
@@ -78,13 +88,52 @@ export default {
       },{
           path:'/',
           text:'实训'
-      }]
+      }],
+      username:'',
+      password:'',
+      picUrl:'',
+      nickname:'',
+      isLogin:false
     }
+  },methods:{
+        userLogin(username,password){
+            console.log(username,password); 
+            this.$http.get('/static/mock/infoData.json')
+            .then((response) => {
+                let info=response.data.filter((item,index,array)=>{
+                    return username===item.username;
+                });
+                 $('#myModal').modal('hide');
+                //个人信息存入sessionStorage中，当前会话有效
+                sessionStorage.setItem('yzInfo', JSON.stringify(info[0]));
+                let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
+            this.picUrl=info1.headlogo;
+            this.nickname=info1.nickname;
+                this.isLogin=true;
+            }).catch((response) => {
+                console.log(response);
+            });       
+        },
+        userExit(){
+            this.isLogin=false;
+            sessionStorage.removeItem('yzInfo');
+        }
+    },mounted: function () {
+        this.$nextTick(function () {
+            if(sessionStorage.getItem('yzInfo')){
+            let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
+            this.picUrl=info1.headlogo;
+            this.nickname=info1.nickname;
+            this.isLogin=true;
+            }
+        })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.modal-dialog{
+    top:20%;
+}
 </style>

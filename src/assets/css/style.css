@@ -99,7 +99,9 @@ ul{list-style: none;}
 .footer{width: 100%; height: 100px; background:#efefef;}
 .modal-body input{width: 60%; margin: 0 auto;margin-bottom: 20px; margin-top: 20px;}
 .modal-footer{text-align: center;}
-.modal-footer button{width: 60%; background: #CCCC00; border-color: #cccc00}
+.modal-footer button{width: 60%; background: #89b0ff;
+    color: white;
+    border-color: #2196F3;}
 
 
 .menu{width:80%;height: 300px;}

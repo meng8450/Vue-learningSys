@@ -11,6 +11,11 @@ import AboutAnswer from '@/components/AboutAnswer'
 import SchoolClass from '@/components/SchoolClass'
 import Lesson from '@/components/Lesson'
 import SecondNavbar from '@/components/SecondNavbar'
+//注册
+import StuSign from '@/components/StuSign'
+import TeaSign from '@/components/TeaSign'
+//404
+import Page404 from '@/components/Page404'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -59,7 +64,29 @@ export default new Router({
         body: Lesson,
         footer: Footer
       }
-    },//重定向
-    { path: '*', redirect: '/' }
+    },
+    {
+      path: '/stusignup',
+      components: {
+        nav: Navbar,
+        body: StuSign,
+        footer: Footer
+      }
+    }, {
+      path: '/teasignup',
+      components: {
+        nav: Navbar,
+        body: TeaSign,
+        footer: Footer
+      }
+    },{
+      path:'/404',
+      components:{
+        nav: Navbar,
+        body: Page404,
+
+      }
+    },
+    { path: '*', redirect: '/404' }//重定向
   ]
 })
