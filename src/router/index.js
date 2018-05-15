@@ -3,13 +3,14 @@ import Router from 'vue-router'
 import Navbar from '@/components/Navbar'
 import Index from '@/components/Index'
 import Classes from '@/components/Classes'
-import Circle from '@/components/Circle'
+import Commend from '@/components/Commend'
 import Footer from '@/components/Footer'
 import Hot from '@/components/Hot'
 import Paper from '@/components/Paper'
 import AboutAnswer from '@/components/AboutAnswer'
 import SchoolClass from '@/components/SchoolClass'
 import Lesson from '@/components/Lesson'
+import SecondNavbar from '@/components/SecondNavbar'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -33,30 +34,17 @@ export default new Router({
       path: '/circle',
       components: {
         nav: Navbar,
-        body: Circle,
+        body: SecondNavbar,
         footer:Footer
-      }
-    }, {
-      path: '/hot',
-      components: {
-        nav: Navbar,
-        body: Hot,
-        footer: Footer
-      }
-    }, {
-      path: '/paper',
-      components: {
-        nav: Navbar,
-        body: Paper,
-        footer: Footer
-      }
-    }, {
-      path: '/aboutanswer',
-      components: {
-        nav: Navbar,
-        body: AboutAnswer,
-        footer: Footer
-      }
+      }, children: [
+        // 推荐主页
+        { path: '/', component: Commend },
+        { path: '/circle/hot', component: Hot },
+        { path: '/circle/paper', component: Paper },
+        { path: '/circle/aboutanswer', component: AboutAnswer },
+
+        // ...其他子路由
+      ]
     }, {
       path: '/schoolclass',
       components: {
@@ -71,6 +59,7 @@ export default new Router({
         body: Lesson,
         footer: Footer
       }
-    },
+    },//重定向
+    { path: '*', redirect: '/' }
   ]
 })

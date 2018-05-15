@@ -1,22 +1,5 @@
 <template>
     <div id="hot">
-        <div class="second_header">
-		<button type="submit" class="btn btn-default">我要提问</button>
-		<ul class="nav nav-tabs">
-			<li style="margin-left: 200px;">
-				<a href="#/circle">推荐</a>
-			</li>
-			<li class="active">
-				<a href="#/hot" style='color:#555;'>热门话题</a>
-			</li>
-			<li>
-				<a href="#/paper">笔记文章</a>
-			</li>
-			<li>
-				<a href="#/aboutanswer">相关提问</a>
-			</li>
-		</ul>
-	</div>
         <div class="thebody">
         <ul>
             <li class="topic clearfix">
@@ -84,19 +67,7 @@
             </li>
         </ul>
     </div>
-    <div class="me_form">
-        <ul class="list-group">
-            <li class="list-group-item"><a href="#"><img src=static\img\collect.png></a>我的收藏</li>
-            <li class="list-group-item"><a href="#"><img src=static\img\question.png></a>我关注的问题</li>
-            <li class="list-group-item"><a href="#"><img src=static\img\news.png></a>
-                <span class="badge">新</span>我的消息
-            </li>
-            <li class="list-group-item"><a href="#"></a><img src=static\img\recover.png>浏览记录</li>
-        </ul>
-    <div class="adver">
-        <p>广告位</p>
-    </div>               
-    </div>
+    <right-navbar></right-navbar>
     </div>
 </template>
 <style  scoped>

@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import RightNavbar from '@/components/RightNavbar'
+Vue.component('right-navbar', RightNavbar)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

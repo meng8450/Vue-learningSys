@@ -4,5 +4,6 @@
 <style>
 .footer{
     position: relative;
+    margin-top: 30px;
 }
 </style>

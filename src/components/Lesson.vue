@@ -19,9 +19,14 @@
         </div>
         <center>
             <h2>Office高级应用</h2>
-            <div class="classVideo" id="dplayer">
-                <h1>课程{{this.$route.params.lessonid}}渲染</h1>
-               
+            <div class="classVideo">
+                <h3>课程{{this.$route.params.lessonid}}渲染</h3>
+               <div class="container">
+                   <d-player :options="options"
+                        @play="play"
+                        ref="player">
+                </d-player>
+                </div>
             </div>
         </center>
         <h3>课程详情</h3>
@@ -42,12 +47,36 @@
   </div>
 </template>
 <script>
+import VueDPlayer from 'vue-dplayer'
 export default {
   name: 'Lesson',
   data () {
     return {
-        
+        options: {
+          video: {
+            url: 'http://static.smartisanos.cn/common/video/t1-ui.mp4',
+            pic: 'http://static.smartisanos.cn/pr/img/video/video_03_cc87ce5bdb.jpg'
+          },
+          autoplay: false,
+          contextmenu: [
+              {
+                  text: 'GitHub',
+                  link: 'https://github.com/MoePlayer/vue-dplayer'
+              }
+          ]
+        },
+        player: null,
     }
+  },
+   mounted() {
+      this.player = this.$refs.player.dp
+    },
+    methods: {
+      play() {
+        console.log('play callback')
+      }},
+  components: {
+    'd-player': VueDPlayer
   }
 }
 </script>
