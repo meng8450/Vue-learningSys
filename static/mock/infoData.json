@@ -1,17 +1,19 @@
 [
     {
-        "headlogo":"./static/img/guest2.jpeg",
-        "nickname":"懵啊",
+        "headlogo":"./static/img/guest1.jpg",
+        "nickname":"大狗",
         "school":"杭州电子科技大学",
         "power":"1",
         "identity":"教师",
-        "username":"admin"
+        "username":"admin",
+        "userid":"1"
     },{
         "headlogo": "./static/img/guest2.jpeg",
         "nickname": "懵啊",
         "school": "杭州电子科技大学",
         "power": "0",
         "identity": "学生",
-        "username":"test"
+        "username":"test",
+        "userid":"2"
     }
 ]

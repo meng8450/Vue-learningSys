@@ -1,5 +1,5 @@
 <template>
- <div id="navBar">
+ <div id="navBar">  
    <!-- 模态框（Modal） -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -33,8 +33,8 @@
             </a>
         </div>
         <ul>
-            <li  v-for="item in navBar">
-                <a href="#" ><router-link :to="item.path">{{item.text}}</router-link></a>
+            <li v-for="nav in navBar">
+                <a href="#" ><router-link :to="nav.path">{{nav.text}}</router-link></a>
             </li>
         </ul>
         <form action="" method="get" class="input-group">
@@ -58,13 +58,20 @@
                 <a href="#/stusignup">注册</a>
             </div>
         </div>
-        <div  v-show="isLogin">
+        <div  v-show="isLogin" style="z-index:9999999">
             <img id="userPhoto" :src="picUrl" class="img-circle"/>
             <div class="login">
-                <a href="#" data-toggle="modal" data-target="#myModal">{{nickname}}</a>
+                <a href="#" @click="toggleList()">{{nickname}}</a> 
                  <a>/</a>
                 <a href="#" @click="userExit()">退出</a>
+                <div class="list" v-show="isList">
+                    <ul>
+                        <li><a href="#">个人中心</a></li> 
+                        <li><a href="#">设置</a></li>
+                    </ul>
+                </div>
             </div>
+            
         </div>
     </div>
  </div>
@@ -93,7 +100,8 @@ export default {
       password:'',
       picUrl:'',
       nickname:'',
-      isLogin:false
+      isLogin:false,
+      isList:false
     }
   },methods:{
         userLogin(username,password){
@@ -117,7 +125,10 @@ export default {
         userExit(){
             this.isLogin=false;
             sessionStorage.removeItem('yzInfo');
-        }
+        },
+        toggleList(){
+            this.isList=!this.isList;
+        },
     },mounted: function () {
         this.$nextTick(function () {
             if(sessionStorage.getItem('yzInfo')){
@@ -135,5 +146,39 @@ export default {
 <style scoped>
 .modal-dialog{
     top:20%;
+}
+.list{
+    position: fixed;
+    z-index: 9999999;
+    background: #fff;
+    width: 90px;
+    border-radius: 5px;
+    right: 45px;
+    height: 100px;
+    margin-top: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.list ul{
+    width: 90px;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+.list ul li{
+    margin: 0;
+    width: 90px;
+    height: 50px;
+}
+.list ul li a{
+    margin:auto;
+    transition: .3s ease-in-out;
+    width: 100%;
+    display: inline-block;
+    line-height: 40px;
+    color: #555;
+}
+.list ul li a:hover{
+    color: #6699ff;
+    transition: .3s ease-in-out;
 }
 </style>

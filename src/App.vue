@@ -18,7 +18,7 @@ require("./assets/js/jquery.min.js");
 require( "./assets/js/bootstrap.min.js");
 require("./assets/js/owl.carousel.js");
 require("./assets/js/smoothScroll-ES5.js");
-require('./assets/css/vue-dplayer.css')
+require('./assets/css/vue-dplayer.css');
 export default {
   name: 'App'
 }
