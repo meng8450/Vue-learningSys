@@ -279,12 +279,10 @@
 
 export default {    
     mounted: function () {
-  this.$nextTick(function () {
     $('#owl-demo').owlCarousel({
                     items: 1,
                     autoPlay: true
-                });
-                })
+                });                
   }
 }
 

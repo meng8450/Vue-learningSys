@@ -159,13 +159,14 @@ export default {
     z-index: 9999999;
     background: #fff;
     width: 90px;
-    border-radius: 5px;
+    border-radius: 4px;
     right: 45px;
     height: 100px;
     margin-top: -5px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
     transition: .4s ease-in-out;
     transform:translate3d(0,-92px,0); 
+    font-weight: lighter;
 }
 #nickname:hover .list{
     display: block;
