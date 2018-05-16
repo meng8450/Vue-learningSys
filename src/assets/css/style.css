@@ -16,7 +16,7 @@ ul{list-style: none;}
 .w99{width:99%}
 .fcw{color:#fff;}
 
-.zhiding{z-index:9999;width: 25px;height: 25px;position: fixed;right: 25px; bottom: 50px; background:url(../img/zhid.png) no-repeat; background-size: contain;display: block;}
+.zhiding{cursor:pointer;z-index:9999;width: 25px;height: 25px;position: fixed;right: 25px; bottom: 50px; background:url(../img/zhid.png) no-repeat; background-size: contain;display: block;}
 .header{overflow: hidden; height:52px; background-color:#fff;padding-right: 10px;z-index: 900;box-shadow: 0 4px 8px 0 rgba(7,17,27,0.1); position:relative;}
 .logo{margin: 0 18px 0 40px; float:left;width:150px;}
 .logo a{ display:block; width: auto; height:52px; line-height:52px; }

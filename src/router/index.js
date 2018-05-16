@@ -16,6 +16,9 @@ import StuSign from '@/components/StuSign'
 import TeaSign from '@/components/TeaSign'
 //404
 import Page404 from '@/components/Page404'
+//个人中心首页
+import Myhead from '@/components/Myhead'
+import UserNavbar from '@/components/UserNavbar'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -86,6 +89,50 @@ export default new Router({
         body: Page404,
 
       }
+    }, {
+      path: '/user/:id', components: {
+        nav: Navbar,
+        body: Myhead,
+        footer: Footer
+      },
+      children: [
+        {
+          // 当 /user/:id/profile 匹配成功，
+          // UserProfile 会被渲染在 User 的 <router-view> 中
+          path: 'work',
+          component: Page404
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'mission',
+          component: Page404
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'grade',
+          component: Page404
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'skill',
+          component: Page404
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'news',
+          component: Page404
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'setting',
+          component: Page404
+        }
+      ]
     },
     { path: '*', redirect: '/404' }//重定向
   ]

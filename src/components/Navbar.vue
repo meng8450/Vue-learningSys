@@ -21,8 +21,8 @@
         </div>
     </div>
     
-    <a href="#" duration="1000" easing="smooth" scrollTo="header" class="scrollOnClick">
-        <span class="zhiding"></span>
+    <a duration="1000" easing="smooth" scrollTo="header" class="scrollOnClick">
+        <span class="zhiding" style="cursor: pointer;cursor: hand;"></span>
     </a>
     <div class="header" id="header">
         <div class="logo">
@@ -61,17 +61,18 @@
         <div  v-show="isLogin" style="z-index:9999999">
             <img id="userPhoto" :src="picUrl" class="img-circle"/>
             <div class="login">
-                <a href="#" @click="toggleList()">{{nickname}}</a> 
-                 <a>/</a>
-                <a href="#" @click="userExit()">退出</a>
-                <div class="list" v-show="isList">
+                <a href="#" id="nickname">{{nickname}}
+                    <div class="list">
                     <ul>
-                        <li><a href="#">个人中心</a></li> 
-                        <li><a href="#">设置</a></li>
+                        <li><a :href="'#/user/'+userid">个人中心</a></li> 
+                        <li><a :href="'#/user/'+userid+'/setting'">设置</a></li>
                     </ul>
                 </div>
-            </div>
             
+                </a>
+                 <a>/</a>
+                <a href="#" @click="userExit()">退出</a>
+                </div>
         </div>
     </div>
  </div>
@@ -101,7 +102,7 @@ export default {
       picUrl:'',
       nickname:'',
       isLogin:false,
-      isList:false
+      userid:''
     }
   },methods:{
         userLogin(username,password){
@@ -118,6 +119,7 @@ export default {
             this.picUrl=info1.headlogo;
             this.nickname=info1.nickname;
                 this.isLogin=true;
+                this.userid=info1.userid;
             }).catch((response) => {
                 console.log(response);
             });       
@@ -125,9 +127,8 @@ export default {
         userExit(){
             this.isLogin=false;
             sessionStorage.removeItem('yzInfo');
-        },
-        toggleList(){
-            this.isList=!this.isList;
+            console.log(this.$route.path.indexOf('user')>-1);
+            this.$route.path.indexOf('user')>-1?this.$router.push({path:'/'}):0;//其中login是你定义的一个路由模块
         },
     },mounted: function () {
         this.$nextTick(function () {
@@ -136,6 +137,7 @@ export default {
             this.picUrl=info1.headlogo;
             this.nickname=info1.nickname;
             this.isLogin=true;
+            this.userid=info1.userid;
             }
         })
   }
@@ -147,7 +149,12 @@ export default {
 .modal-dialog{
     top:20%;
 }
-.list{
+#nickname{
+    height: 52px;
+    display: inline-block
+}
+#nickname .list{
+    opacity:0;
     position: fixed;
     z-index: 9999999;
     background: #fff;
@@ -155,8 +162,16 @@ export default {
     border-radius: 5px;
     right: 45px;
     height: 100px;
-    margin-top: 5px;
+    margin-top: -5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: .4s ease-in-out;
+    transform:translate3d(0,-92px,0); 
+}
+#nickname:hover .list{
+    display: block;
+    opacity: 1;
+    transition:.4s ease-in-out;
+    transform:translate3d(0,0,0); 
 }
 .list ul{
     width: 90px;
