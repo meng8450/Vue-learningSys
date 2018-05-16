@@ -49,7 +49,7 @@ export default {
             identity:'',
             school:'',
             userid:'',
-            ind:'',
+            ind:0,
             power:'',
             stuBar:[{
                 href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}`,

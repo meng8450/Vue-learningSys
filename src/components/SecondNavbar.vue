@@ -29,7 +29,7 @@
                     text:'相关提问',
                     href:'#/circle/aboutanswer'
                 }],
-                ind:''
+                ind:0
             }
         },
         methods:{

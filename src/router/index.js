@@ -19,6 +19,13 @@ import Page404 from '@/components/Page404'
 //个人中心首页
 import Myhead from '@/components/Myhead'
 import UserNavbar from '@/components/UserNavbar'
+//个人中心二级组件
+import Work from '@/components/Work'
+import Mission from '@/components/Mission'
+import Grade from '@/components/Grade'
+import Skill from '@/components/Skill'
+import News from '@/components/News'
+import Setting from '@/components/Setting'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -97,40 +104,44 @@ export default new Router({
       },
       children: [
         {
+          path:'/',
+          component:Page404
+        },
+        {
           // 当 /user/:id/profile 匹配成功，
           // UserProfile 会被渲染在 User 的 <router-view> 中
           path: 'work',
-          component: Page404
+          component: Work
         },
         {
           // 当 /user/:id/posts 匹配成功
           // UserPosts 会被渲染在 User 的 <router-view> 中
           path: 'mission',
-          component: Page404
+          component: Mission
         },
         {
           // 当 /user/:id/posts 匹配成功
           // UserPosts 会被渲染在 User 的 <router-view> 中
           path: 'grade',
-          component: Page404
+          component: Grade
         },
         {
           // 当 /user/:id/posts 匹配成功
           // UserPosts 会被渲染在 User 的 <router-view> 中
           path: 'skill',
-          component: Page404
+          component: Skill
         },
         {
-          // 当 /user/:id/posts 匹配成功
-          // UserPosts 会被渲染在 User 的 <router-view> 中
+          // 当 /user/:id/setting 匹配成功
+          // Setting 会被渲染在 Myhead 的 <router-view> 中
           path: 'news',
-          component: Page404
+          component: News
         },
         {
-          // 当 /user/:id/posts 匹配成功
-          // UserPosts 会被渲染在 User 的 <router-view> 中
+          // 当 /user/:id/setting 匹配成功
+          // Setting 会被渲染在 Myhead 的 <router-view> 中
           path: 'setting',
-          component: Page404
+          component: Setting
         }
       ]
     },
