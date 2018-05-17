@@ -90,7 +90,7 @@
             </li>
         </ul>
     </div>
-<right-navbar></right-navbar>
+
     </div>
   </div>
 </template>

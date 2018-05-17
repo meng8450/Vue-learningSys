@@ -34,10 +34,6 @@ div {
 .login{width:100px; float:left; height:52px; line-height:52px; margin-left:30px; font-size:11px; position:absolute; right:20px;}
 .login a{ margin-left:10px;}
 
-.main{
-    /* width: 100%;
-    height: auto; */
-}
 .myheader{
     width: 100%;
     height:120px; 
@@ -85,9 +81,6 @@ div {
     float: left;
     text-align: left;
 }
-.setup{
-  
-}
 .setup .btn-default{
     border-radius: 35px;
     background: rgba(255, 255, 255, 0.5);
@@ -104,9 +97,6 @@ div {
     width: 172px;
     left: 36px;
     top: 0px;
-}
-.left-span img{
-   
 }
 .left-span ul li:first-child{
     margin-top: 80px;
@@ -140,6 +130,7 @@ div {
     margin-left: 360px;
     min-height: 589px;
     width: 900px;
+    text-align: left;
 }
 .right-course{
     padding-bottom: 52px ;
@@ -152,9 +143,6 @@ div {
     color: #7f8082;
     border-bottom: 1px solid #d4d5d7;
     padding-left: 5px;
-}
-.course-info{
-    /* padding: 0 0 0 64px; */
 }
 .course-item{
     position: relative;

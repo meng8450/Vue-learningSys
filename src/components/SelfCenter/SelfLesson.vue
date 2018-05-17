@@ -1,8 +1,7 @@
 <template>
-    <div id="work">
-        <div class="course">
+    <div class="course">
         <div class="right-course">
-            <h2>我的实训</h2>
+            <h2>全部课程</h2>
         </div>
         <div class="course-info">
             <div class="course-item ">
@@ -10,23 +9,23 @@
                     <li class="course-one" data-courseid="#" data-uid="#">
                         <div class="course-img l">
                             <a href="#" target="_blank">
-                                <img width="200" height="113" alt="Pscc全面技能培训" src="static\img\course2.png">
+                                <img width="200" height="113" alt="互联网营销策划实务" src="static\img\course1.png">
                             </a>
                         </div>
                         <div class="course-cont">
                             <h3 class="cou-title">
-                                <a href="#" target="_blank">Pscc全面技能培训</a>
+                                <a href="#" target="_blank">互联网营销策划实务</a>
                                 <span class="i-new">更新完毕</span>
                             </h3>
                             <div class="study-points">
-                                <span class="i-left">已学2%</span>
-                                <span>用时 35分</span>
-                                <span>学习至1-2 怎样使用工具栏</span>
+                                <span class="i-left">已学0%</span>
+                                <span>用时 0分</span>
+                                <span>学习至1-1 课程介绍</span>
                             </div>
                             <div class="catog-points">
                                 <span class="i-left">
                                     <a href="#">笔记
-                                        <i>1</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <span class="i-mid">
@@ -36,7 +35,7 @@
                                 </span>
                                 <span class="i-right">
                                     <a href="#">问答
-                                        <i>10</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <div class="btn-behave">
@@ -50,23 +49,23 @@
                     <li class="course-one" data-courseid="#" data-uid="#">
                         <div class="course-img l">
                             <a href="#" target="_blank">
-                                <img width="200" height="113" alt="Pscc全面技能培训" src="static\img\course2.png">
+                                <img width="200" height="113" alt="互联网营销策划实务" src="static\img\course1.png">
                             </a>
                         </div>
                         <div class="course-cont">
                             <h3 class="cou-title">
-                                <a href="#" target="_blank">Pscc全面技能培训</a>
+                                <a href="#" target="_blank">互联网营销策划实务</a>
                                 <span class="i-new">更新完毕</span>
                             </h3>
                             <div class="study-points">
-                                <span class="i-left">已学2%</span>
-                                <span>用时 35分</span>
-                                <span>学习至1-2 怎样使用工具栏</span>
+                                <span class="i-left">已学0%</span>
+                                <span>用时 0分</span>
+                                <span>学习至1-1 课程介绍</span>
                             </div>
                             <div class="catog-points">
                                 <span class="i-left">
                                     <a href="#">笔记
-                                        <i>1</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <span class="i-mid">
@@ -76,7 +75,7 @@
                                 </span>
                                 <span class="i-right">
                                     <a href="#">问答
-                                        <i>10</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <div class="btn-behave">
@@ -90,23 +89,23 @@
                     <li class="course-one" data-courseid="#" data-uid="#">
                         <div class="course-img l">
                             <a href="#" target="_blank">
-                                <img width="200" height="113" alt="Pscc全面技能培训" src="static\img\course2.png">
+                                <img width="200" height="113" alt="互联网营销策划实务" src="static\img\course1.png">
                             </a>
                         </div>
                         <div class="course-cont">
                             <h3 class="cou-title">
-                                <a href="#" target="_blank">Pscc全面技能培训</a>
+                                <a href="#" target="_blank">互联网营销策划实务</a>
                                 <span class="i-new">更新完毕</span>
                             </h3>
                             <div class="study-points">
-                                <span class="i-left">已学2%</span>
-                                <span>用时 35分</span>
-                                <span>学习至1-2 怎样使用工具栏</span>
+                                <span class="i-left">已学0%</span>
+                                <span>用时 0分</span>
+                                <span>学习至1-1 课程介绍</span>
                             </div>
                             <div class="catog-points">
                                 <span class="i-left">
                                     <a href="#">笔记
-                                        <i>1</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <span class="i-mid">
@@ -116,7 +115,7 @@
                                 </span>
                                 <span class="i-right">
                                     <a href="#">问答
-                                        <i>10</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <div class="btn-behave">
@@ -130,23 +129,23 @@
                     <li class="course-one" data-courseid="#" data-uid="#">
                         <div class="course-img l">
                             <a href="#" target="_blank">
-                                <img width="200" height="113" alt="Pscc全面技能培训" src="static\img\course2.png">
+                                <img width="200" height="113" alt="互联网营销策划实务" src="static\img\course1.png">
                             </a>
                         </div>
                         <div class="course-cont">
                             <h3 class="cou-title">
-                                <a href="#" target="_blank">Pscc全面技能培训</a>
+                                <a href="#" target="_blank">互联网营销策划实务</a>
                                 <span class="i-new">更新完毕</span>
                             </h3>
                             <div class="study-points">
-                                <span class="i-left">已学2%</span>
-                                <span>用时 35分</span>
-                                <span>学习至1-2 怎样使用工具栏</span>
+                                <span class="i-left">已学0%</span>
+                                <span>用时 0分</span>
+                                <span>学习至1-1 课程介绍</span>
                             </div>
                             <div class="catog-points">
                                 <span class="i-left">
                                     <a href="#">笔记
-                                        <i>1</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <span class="i-mid">
@@ -156,7 +155,7 @@
                                 </span>
                                 <span class="i-right">
                                     <a href="#">问答
-                                        <i>10</i>
+                                        <i>0</i>
                                     </a>
                                 </span>
                                 <div class="btn-behave">
@@ -167,18 +166,23 @@
                     </li>
                 </ul>
                 <div class="mypage">
-                <ul class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
-                </div>            
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                    </div>     
             </div>
         </div>
     </div>
-    </div>
 </template>
+<style scoped>
+.catog-points span {
+    display: inline-block;
+    width: 135px;
+}
+</style>

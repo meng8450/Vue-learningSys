@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Navbar from '@/components/Navbar'
-import Index from '@/components/Index'
+import IndexPage from '@/components/IndexPage'
 import Footer from '@/components/Footer'
 import Classes from '@/components/Classes'
 //学友圈二级导航
@@ -21,12 +21,14 @@ import Page404 from '@/components/404/Page404'
 //个人中心首页
 import Myhead from '@/components/SelfCenter/Myhead'
 //个人中心二级组件
+import SelfLesson from '@/components/SelfCenter/SelfLesson'
 import Work from '@/components/SelfCenter/Work'
 import Mission from '@/components/SelfCenter/Mission'
 import Grade from '@/components/SelfCenter/Grade'
 import Skill from '@/components/SelfCenter/Skill'
 import News from '@/components/SelfCenter/News'
 import Setting from '@/components/SelfCenter/Setting'
+const index = r => require.ensure([], () => r(require('@/components/IndexPage')))
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -34,7 +36,7 @@ export default new Router({
       path: '/',
       components: {
         nav:Navbar,
-        body:Index,
+        body:IndexPage,
         footer:Footer
       }
     },
@@ -106,7 +108,7 @@ export default new Router({
       children: [
         {
           path:'/',
-          component:Page404
+          component:SelfLesson
         },
         {
           // 当 /user/:id/profile 匹配成功，

@@ -33,7 +33,7 @@
             </a>
         </div>
         <ul>
-            <li v-for="nav in navBar">
+            <li v-for="(nav,index) in navBar" :key="index">
                 <a href="#" ><router-link :to="nav.path">{{nav.text}}</router-link></a>
             </li>
         </ul>

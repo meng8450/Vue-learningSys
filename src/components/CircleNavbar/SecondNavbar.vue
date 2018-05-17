@@ -3,12 +3,15 @@
       <div class="second_header">
 		<button type="submit" class="btn btn-default">我要提问</button>
 		<ul class="nav nav-tabs" style="padding-left: 200px;">
-			<li v-for="item,index in navBar" :class="{'active':ind === index}">
+			<li v-for="(item,index) in navBar" :class="{'active':ind === index}" :key="index">
 				<a :href="item.href" @click="activeItem(index)">{{item.text}}</a>
 			</li>
 		</ul>
 	</div>
-  <transition name="fade"><router-view></router-view></transition>
+          <right-navbar></right-navbar>
+  <transition name="fade"><router-view>
+      </router-view></transition>
+  
   </div>
   
 </template>

@@ -73,7 +73,6 @@
             </li>
         </ul>
     </div>
-    <right-navbar></right-navbar>
     </div>
 </template>
 <style  scoped>

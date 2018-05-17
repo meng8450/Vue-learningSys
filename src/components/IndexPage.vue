@@ -12,7 +12,7 @@
             </ol>
             <!-- Carousel items -->
             <div class="carousel-inner" id="owl-box" style="width: 100%; height:550px;">
-              <div class="item" v-for="item in lunbo" :class="{ active: item.active }"><a class="itemPhoto">
+              <div class="item" v-for="(item,index) in lunbo" :class="{ active: item.active }" :key="index"><a class="itemPhoto">
                     <img :src="item.picUrl" alt="">
                 </a></div>
             </div>
@@ -25,7 +25,7 @@
         <!--项目栏-->
         <table class="item mc">
             <tr>
-                <td v-for="item in fourItems">
+                <td v-for="(item,index) in fourItems" :key="index">
                     <a :href="'#'+item.href" duration="1500" easing="smooth" :scrollTo="item.href" class="scrollOnClick">
                         <span class="square" :class="item.class">
                             <img :src="item.src">
@@ -49,9 +49,9 @@
             <hr>
         </div>
 <hr id="yzkc">
-        <table class="lessonShow" v-for="items,index in lessonsShow">
+        <table class="lessonShow" v-for="(items,index) in lessonsShow" :key="index">
             <tr>
-                <td v-for="item in items">
+                <td v-for="(item,index) in items" :key="index">
                     <a href="#" target="_blank">
                     <span class="lessonBox">
                         <img :src="item.src">
@@ -338,7 +338,7 @@
 <script>
 let indexData=require('../../static/mock/indexData.json');
 export default {
-  name: 'Index',
+  name: 'IndexPage',
   data () {
     return indexData
   }

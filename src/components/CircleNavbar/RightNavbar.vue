@@ -40,3 +40,19 @@
         },
     }
 </script>
+<style scoped>
+.me_form {
+    text-align: left!important;
+    margin-left: 0!important;
+    float: right!important;
+    position: absolute;
+    right: 8rem;
+}
+.thebody{
+    width: auto!important;
+    float: left!important;
+    text-align: left!important;
+    position: relative!important;
+}
+</style>
+

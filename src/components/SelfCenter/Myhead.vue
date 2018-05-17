@@ -22,13 +22,13 @@
         <div class="work">
         <div class="left-span">
             <ul>
-                <li v-for="item,index in stuBar" v-if="power==='0'">
+                <li v-for="(item,index) in stuBar" v-if="power==='0'" :key="index">
                     <a :href="item.href" @click="activeItem(index)" :class="{'active':ind===index}">
                         <i :class="item.class"></i>
                         <span>{{item.text}}</span>
                     </a>
                 </li>
-                <li v-for="item,index in teaBar" v-if="power==='1'">
+                <li v-for="(item,index) in teaBar" v-if="power==='1'" :key="index">
                     <a :href="item.href" @click="activeItem(index)" :class="{'active':ind===index}">
                         <i :class="item.class"></i>
                         <span>{{item.text}}</span>
@@ -37,7 +37,7 @@
             </ul>
         </div>
         </div>
-        <router-view></router-view>
+        <transition name="fade"><router-view></router-view></transition>
     </div>
 </template>
 <script>
@@ -130,4 +130,10 @@ export default {
     background: #99CCFF;
     border-radius: 8px 0 0 8px;
 }
+.fade-enter-active, .fade-leave-active {
+        transition: opacity .5s
+      }
+      .fade-enter, .fade-leave-active {
+        opacity: 0
+      }
 </style>

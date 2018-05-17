@@ -20,6 +20,7 @@ require("./assets/js/owl.carousel.js");
 require("./assets/js/smoothScroll-ES5.js");
 require('./assets/css/vue-dplayer.css');
 require('./assets/css/student-course.css');
+require('./assets/css/student-renwu.css');
 export default {
   name: 'App'
 }

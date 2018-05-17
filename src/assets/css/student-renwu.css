@@ -33,11 +33,6 @@ div {
 #userPhoto{ width:30px; height:30px; float:left; position:absolute; right:120px; margin-top:10px; }
 .login{width:100px; float:left; height:52px; line-height:52px; margin-left:30px; font-size:11px; position:absolute; right:20px;}
 .login a{ margin-left:10px;}
-
-.main{
-    /* width: 100%;
-    height: auto; */
-}
 .myheader{
     width: 100%;
     height:120px; 
@@ -85,9 +80,6 @@ div {
     float: left;
     text-align: left;
 }
-.setup{
-  
-}
 .setup .btn-default{
     border-radius: 35px;
     background: rgba(255, 255, 255, 0.5);
@@ -104,9 +96,6 @@ div {
     width: 172px;
     left: 36px;
     top: 0px;
-}
-.left-span img{
-   
 }
 .left-span ul li:first-child{
     margin-top: 80px;
@@ -140,15 +129,14 @@ div {
     margin-left: 360px;
     min-height: 589px;
     width: 900px;
+    text-align: left;
 }
 .right-renwu{
     padding-bottom: 52px ;
 }
 .right-renwu a{
     color: #f01400;
-    float: right;
     display: inline;
-    margin-top: 20px;
 }
 .right-renwu h2{
     font-family: Microsoft yahei;
@@ -158,9 +146,6 @@ div {
     color: #7f8082;
     border-bottom: 1px solid #d4d5d7;
     /* margin-left: -50px;  */
-}
-.renwu-info{
-    /* padding: 0 0 0 64px; */
 }
 .renwu-item{
     position: relative;
@@ -172,9 +157,6 @@ div {
     /* padding: 30px 0; */
     position: relative;
     border-bottom: 1px solid #eff1f0;
-}
-.renwu-item .renwu-cont{
-    /* padding-left: 230px; */
 }
 .cou-title a{
     color: #12171b;

@@ -56,7 +56,7 @@
 	
 	
 </div>
-<right-navbar></right-navbar>
+
     </div>
 </template>
 <script>
