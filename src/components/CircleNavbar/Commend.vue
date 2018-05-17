@@ -60,12 +60,7 @@
     </div>
 </template>
 <script>
-	import secondnavbar from './SecondNavbar';
-	export default{
-		components:{
-			name:secondnavbar
-		}
-	}
+	
 </script>
 <style>
 #circle{

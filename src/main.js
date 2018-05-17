@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import RightNavbar from '@/components/RightNavbar'
+import RightNavbar from '@/components/CircleNavbar/RightNavbar'
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
 Vue.component('right-navbar', RightNavbar)

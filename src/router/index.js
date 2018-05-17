@@ -2,30 +2,31 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Navbar from '@/components/Navbar'
 import Index from '@/components/Index'
-import Classes from '@/components/Classes'
-import Commend from '@/components/Commend'
 import Footer from '@/components/Footer'
-import Hot from '@/components/Hot'
-import Paper from '@/components/Paper'
-import AboutAnswer from '@/components/AboutAnswer'
+import Classes from '@/components/Classes'
+//学友圈二级导航
+import SecondNavbar from '@/components/CircleNavbar/SecondNavbar'
+import Commend from '@/components/CircleNavbar/Commend'
+import Hot from '@/components/CircleNavbar/Hot'
+import Paper from '@/components/CircleNavbar/Paper'
+import AboutAnswer from '@/components/CircleNavbar/AboutAnswer'
+
 import SchoolClass from '@/components/SchoolClass'
 import Lesson from '@/components/Lesson'
-import SecondNavbar from '@/components/SecondNavbar'
 //注册
-import StuSign from '@/components/StuSign'
-import TeaSign from '@/components/TeaSign'
+import StuSign from '@/components/Signup/StuSign'
+import TeaSign from '@/components/Signup/TeaSign'
 //404
-import Page404 from '@/components/Page404'
+import Page404 from '@/components/404/Page404'
 //个人中心首页
-import Myhead from '@/components/Myhead'
-import UserNavbar from '@/components/UserNavbar'
+import Myhead from '@/components/SelfCenter/Myhead'
 //个人中心二级组件
-import Work from '@/components/Work'
-import Mission from '@/components/Mission'
-import Grade from '@/components/Grade'
-import Skill from '@/components/Skill'
-import News from '@/components/News'
-import Setting from '@/components/Setting'
+import Work from '@/components/SelfCenter/Work'
+import Mission from '@/components/SelfCenter/Mission'
+import Grade from '@/components/SelfCenter/Grade'
+import Skill from '@/components/SelfCenter/Skill'
+import News from '@/components/SelfCenter/News'
+import Setting from '@/components/SelfCenter/Setting'
 Vue.use(Router)
 export default new Router({
   routes: [

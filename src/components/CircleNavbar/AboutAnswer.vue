@@ -1,7 +1,6 @@
 <template>
   <div id="aboutAnswer">
       <div class="thebody">
-    <div class="two_body">
         <div class="ques-answer">
             <div class="tag-img">
                 <a href="#" target="_blank">
@@ -66,7 +65,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 <right-navbar></right-navbar>
   </div>

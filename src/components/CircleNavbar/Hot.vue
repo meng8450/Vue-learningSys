@@ -3,9 +3,12 @@
         <div class="thebody">
         <ul>
             <li class="topic clearfix">
-                <a href="#" target="_blank">
-                    <img class="topic-img" src="static\img\topic-1.png" alt="【内推第2波】  打工奋斗7万落京户VS自主创业牧马城市，如何抉择？">
-                </a>
+                <div class="">
+                    <img class="topic-img" src="static\img\topic-1.png">
+                    <div class="img-shadow">
+                        <img src="static\img\topic-1.png">
+                    </div>
+                </div>
                 <div class="topic-content">
                     <p class="topic-title">
                             <a href="#" target="_blank" title="【内推第2波】  打工奋斗7万落京户VS自主创业牧马城市，如何抉择？">【内推第2波】  打工奋斗7万落京户VS自主创业牧马城市，如何抉择？</a>        
@@ -35,9 +38,12 @@
         </ul>
         <ul>
             <li class="topic clearfix">
-                <a href="#" target="_blank">
+                
                     <img class="topic-img" src="static\img\topic-2.png" alt="【获奖名单戳查看更多】 当我们谈论Java时，我们都谈些什么？">
-                </a>
+                <div class="img-shadow">
+                        <img src="static\img\topic-2.png">
+                    </div>
+                
                 <div class="topic-content">
                     <p class="topic-title">
                             <a href="#" target="_blank" title="【获奖名单戳查看更多】 当我们谈论Java时，我们都谈些什么？">【获奖名单戳查看更多】 当我们谈论Java时，我们都谈些什么？</a>      
@@ -79,4 +85,36 @@
     float: left;
     margin-left: 50px;
 }
+/*--- Container that maintains image and shadow. ---*/
+.container-img {
+  position: relative;
+}
+ 
+/*--- IMG takes the full size of container-img. ---*/
+img {
+  max-width: 100%;
+}
+ 
+/*--- Setup the image shadow. ---*/
+.img-shadow {
+  position: absolute;
+    background-size: 100%;
+    bottom: -20%;
+    height: 95%;
+    z-index: -1;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+}
+ 
+/*--- Remove shadow for IE and Edge (does not support blur filter). ---*/
+@supports (-ms-ime-align: auto) {
+  .img-shadow {
+    display: none;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .img-shadow {
+    display: none;
+  }
+}                    
 </style>

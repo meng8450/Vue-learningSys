@@ -84,10 +84,7 @@ p {
     border-bottom: 1px solid #d0d6d9;
 }
 .topic-img{
-    width: 20%;
-    border-radius: 8px;
-    float: left;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  float: left;
 }
 .topic-content{
     width: 80%;
