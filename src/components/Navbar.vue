@@ -194,7 +194,7 @@ export default {
     color: #555;
 }
 .list ul li a:hover{
-    color: #6699ff;
+    color: #48cfad;
     transition: .3s ease-in-out;
 }
 </style>

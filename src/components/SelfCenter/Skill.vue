@@ -28,7 +28,7 @@
 </template>
 <style scoped>
 .course .progress-bar{
-    background-color: #99CCFF!important;
+    background-color: #48cfad!important;
     border: none!important;
 }
 .right-course {

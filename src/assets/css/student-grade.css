@@ -17,8 +17,8 @@ li,ul{
 div {
     display: block;
 }
-.header a{color: black;font-family: microsoft yahei;}
-.header a:hover{text-decoration: none;color: black;}
+.header a{color: black;font-family: microsoft yahei;transition: all .2s ease-in-out;}
+.header a:hover{text-decoration: none;color: #48cfad;transition: all .2s ease-in-out;}
 .header{overflow: hidden; height:52px; background-color:#fff;padding-right: 10px;z-index: 900;box-shadow: 0 4px 8px 0 rgba(7,17,27,0.1); position:relative;}
 .logo{margin: 0 18px 0 40px; float:left;width:150px;}
 .logo a{ display:block; width: auto; height:52px; line-height:52px; }
@@ -129,11 +129,11 @@ div {
 }
 .left-span a:hover{
     text-decoration: none;
-    color: black;
+    color: #48cfad;
 }
 .left-span ul a.active {
     color: #fff;
-    background: #99CCFF;
+    background: #48cfad;
     border-radius: 8px 0 0 8px;
 }
 .grade{

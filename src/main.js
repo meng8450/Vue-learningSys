@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import RightNavbar from '@/components/CircleNavbar/RightNavbar'
 import VueResource from 'vue-resource';
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload);
 Vue.use(VueResource);
 Vue.component('right-navbar', RightNavbar)
 Vue.config.productionTip = false

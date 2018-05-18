@@ -18,25 +18,21 @@
         "fourItems": [
             {
                 "href": "yzkc",
-                "class": "colorBlue",
                 "src": "/static/img/class.png",
                 "text": "课程"
             },
             {
                 "href": "sxkc",
-                "class": "colorYellow",
                 "src": "/static/img/shixun.png",
                 "text": "实训"
             },
             {
                 "href": "wxgg",
-                "class": "colorGreen",
                 "src": "/static/img/zixun.png",
                 "text": "咨询"
             },
             {
                 "href": "xyq",
-                "class": "colorYellow2",
                 "src": "/static/img/chat.png",
                 "text": "学友圈"
             }

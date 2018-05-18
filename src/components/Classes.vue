@@ -40,7 +40,7 @@
 
     <div class="classTitle mc">
         <h3 class="text-left">编程开发</h3>
-        <a href="#">查看全部>></a>
+        <a href="#">查看全部</a>
     </div>
     <div class="classes mc">
         <a href="#" target="_blank">
@@ -211,73 +211,61 @@
 
     <div class="classTitle mc">
         <h3 class="text-left">校内课堂</h3>
-        <a href="#">></a>
+        <a href="#">查看全部</a>
     </div>
-    <div class="classes mc">
-        <a href="#" target="_blank">
+    <div class="classes mc" v-for="(item,index) in classInfos" :key="index">
+        <div class="text-center">
+        <a href="#" target="_blank" v-for="(classInfo,index) in item" :key="index">
             <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
+                <img v-lazy="classInfo.src">
+                <span class="className">{{classInfo.className}}</span>
+                <span class="classTea">{{classInfo.teacherName}}</span>
             </span>
         </a>
-        <a href="#" target="_blank">
-            <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-        <a href="#" target="_blank">
-            <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-        <a href="#" target="_blank">
-            <span class="classBox" style="margin-right: 0px;">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-    </div>
-    <div class="classes mc">
-        <a href="#" target="_blank">
-            <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-        <a href="#" target="_blank">
-            <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-        <a href="#" target="_blank">
-            <span class="classBox">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
-        <a href="#" target="_blank">
-            <span class="classBox" style="margin-right: 0px;">
-                <img src="/static/img/class.JPG">
-                <span class="className">课程名</span>
-                <span class="classTea">授课教师</span>
-            </span>
-        </a>
+        </div>
     </div>
   </div>
 </template>
 <script>
 
-export default {    
+export default {
+    data(){
+        return {
+            classInfos:[[{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            }],[{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            },{
+                src:"/static/img/class.JPG",
+                className:"课程名",
+                teacherName:"授课老师"
+            }]]
+        }
+    },    
     mounted: function () {
     $('#owl-demo').owlCarousel({
                     items: 1,
@@ -291,3 +279,34 @@ export default {
               
     
 </script>
+<style scoped>
+.classBox{
+    width: 250px!important;
+    height: 200px!important;
+    background: #fffff1!important;
+    display: inline-block!important;
+    margin: 0 6px!important;
+    margin-bottom: 10px!important;
+    border-radius: 10px!important;
+    transition: .3s ease-in-out;
+    box-shadow: 0 6px 10px 0 rgba(72, 207, 173, 0.1), 0 2px 2px 0 rgba(72, 207, 173, 0.2);
+}
+.classBox:hover{
+    box-shadow: 0 7px 10px 0 rgba(72, 207, 173, 0.3), 0 2px 2px 0 rgba(72, 207, 173, 0.23);
+    transition: .3s ease-in-out;
+}
+.classBox img{
+    border-radius: 10px 10px 0 0;
+    transition: .3s ease-in-out;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #48cfad;
+    border-color: #48cfad;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #48cfad9e;
+    border-color: #48cfad;
+}
+</style>

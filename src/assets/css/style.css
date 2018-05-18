@@ -5,10 +5,9 @@ a{text-decoration:none; color:#000000;}
 a:hover{text-decoration:none;}
 body{ min-width: 600px;}
 ul{list-style: none;}
-.colorBlue{background: #99ccff;}
-.colorYellow{background: #ffcc33}
-.colorYellow2{background:#fff333; }
-.colorGreen{background: #cccc00;}
+.colorGreen {
+    background: #48cfad;
+}
 .mc{margin: 0 auto;}
 .mr0{margin-right: 0;}
 .fs18{font-size: 16px;}
@@ -46,11 +45,11 @@ ul{list-style: none;}
 
 
 .lessonShow{width: 80%;text-align: center; margin-top: 30px; margin: 0 auto;}
-.lessonBox{transition: .15s ease-in-out;width:250px;height:200px; display:inline-block;border: #cfcfcf 1px solid;box-shadow:0 0 5px rgba(7,17,27,0.2);padding: 13px; margin: 0 10px 40px;}
+.lessonBox{transition: .15s ease-in-out;width:250px;height:200px; display:inline-block;border: none;box-shadow: 0 6px 10px 0 rgba(72, 207, 173, 0.3), 0 2px 2px 0 rgba(72, 207, 173, 0.2);padding: 13px; margin: 0 10px 40px;}
 .lessonBox img{width: 99%;height: 100px; margin-bottom: 6px;}
 .lessonBox span{position: relative;}
 .lessonBox span img{width: 13px; height: 13px;position: absolute; left: 0px;}
-.lessonBox:hover{margin-bottom: 35px;transition: .15s ease-in-out;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
+.lessonBox:hover{margin-bottom: 35px;transition: .15s ease-in-out;box-shadow: 0 7px 10px 0 rgba(72, 207, 173, 0.5), 0 2px 2px 0 rgba(72, 207, 173, 0.5); }
 .more{ margin-top: 30px; width: 90%; text-align: right; margin: 0 auto; margin-bottom: 40px;}
 
 .lessonAdv{width: 830px;
@@ -118,19 +117,19 @@ ul{list-style: none;}
 
 .classTitle{width:80%; height: 60px;margin-top: 100px; position: relative;}
 .classTitle h3{display: inline;}
-.classTitle a{position: absolute; right: 0px; top:10px;}
+.classTitle a{position: absolute; right: 0px; top:10px;color: #48cfad;}
 .classes{width: 80%; height: auto; overflow: hidden; margin-bottom: 80px;}
 .classLef{width: 220px;margin-right:56px; height: 420px; display: block;float: left;}
-.classLef img{width:200px;height: 420px;}
+.classLef img{width:200px;height: 420px;    box-shadow: -10px 11px 20px 0px rgba(72, 207, 173, 0.46), 0 2px 2px 0 rgba(72, 207, 173, 0.23)}
 .classRig{float: left;width: 802px;}
 .classRigchild{margin-bottom: 20px; height: 200px;}
 .classBox{width: 250px; height: 200px; background:#f3f1f1;margin-right:26px; float: left; display: block;}
 .classBox img{ width: 250px; height: 130px;}
 .classBox span{display: block;width: 100%; margin-left: 6px;}
-.className{font-size: 16px;color: #000000; height: 16px; line-height: 15px; margin-top: 5px;}
-.classTea{font-size: 14px; color: #cfcfcf; height: 14px; line-height: 14x;margin-top: 5px;}
-.classPri{font-size: 18px; color: coral; height: 25px; line-height: 25px; margin-top: 6px;}
-.classPri p{color: coral; display: inline;}
+.className{font-size: 16px;color: #000000; height: 16px; font-weight: lighter;line-height: 15px; margin-top: 5px;}
+.classTea{font-size: 14px; color: #b1b1b3; height: 14px; line-height: 14x;margin-top: 5px;}
+.classPri{font-size: 18px; color: #48cfad; height: 25px; line-height: 25px; margin-top: 6px;}
+.classPri p{color: #48cfad; display: inline;}
 
 .main-class{margin-top: 20px; width: 85%;}
 .crumb{width: 100%;  }

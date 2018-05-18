@@ -13,7 +13,7 @@
             <!-- Carousel items -->
             <div class="carousel-inner" id="owl-box" style="width: 100%; height:550px;">
               <div class="item" v-for="(item,index) in lunbo" :class="{ active: item.active }" :key="index"><a class="itemPhoto">
-                    <img :src="item.picUrl" alt="">
+                    <img v-lazy="item.picUrl" alt="">
                 </a></div>
             </div>
             <!-- Carousel nav -->
@@ -27,8 +27,8 @@
             <tr>
                 <td v-for="(item,index) in fourItems" :key="index">
                     <a :href="'#'+item.href" duration="1500" easing="smooth" :scrollTo="item.href" class="scrollOnClick">
-                        <span class="square" :class="item.class">
-                            <img :src="item.src">
+                        <span class="square colorGreen">
+                            <img v-lazy="item.src">
                             <p>{{item.text}}</p>
                         </span>
                     </a>
@@ -54,7 +54,7 @@
                 <td v-for="(item,index) in items" :key="index">
                     <a href="#" target="_blank">
                     <span class="lessonBox">
-                        <img :src="item.src">
+                        <img v-lazy="item.src">
                         <strong>
                             <p class="text-left fs18">{{item.text}}</p>
                         </strong>

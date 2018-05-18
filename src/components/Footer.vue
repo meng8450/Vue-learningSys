@@ -21,12 +21,13 @@
 .footer{
     position: relative;
     margin-top: 30px;
-    color: #999;
+    color: white;
     height: 100%;
-    background: #333;
+    background: #48cfad;
     padding-top: 12px;
+    font-weight: lighter;
 }
 .footer a{
-  color: #999;
+  color: white;
 }
 </style>

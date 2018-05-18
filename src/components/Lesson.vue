@@ -54,8 +54,8 @@ export default {
     return {
         options: {
           video: {
-            url: './static/video/Westworld.mp4',
-            pic: './static/img/Westworld.png'
+            url: 'http://odwup6q5f.bkt.clouddn.com/Westworld.mp4',
+            pic: ''
           },
           autoplay: false,
           contextmenu: [
