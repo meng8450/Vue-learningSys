@@ -80,3 +80,9 @@ export default {
   }
 }
 </script>
+<style>
+.dplayer {
+    box-shadow: -10px 11px 0px 0px rgba(72, 207, 173, 0.61), 0 2px 2px 0 rgba(72, 207, 173, 0.49);
+}
+</style>
+

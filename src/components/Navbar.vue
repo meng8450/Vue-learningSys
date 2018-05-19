@@ -132,6 +132,7 @@ export default {
         },
     },mounted: function () {
         this.$nextTick(function () {
+            console.log('judge login...');
             if(sessionStorage.getItem('yzInfo')){
             let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
             this.picUrl=info1.headlogo;

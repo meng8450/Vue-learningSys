@@ -14,26 +14,8 @@
         </div>
 
         <div id="owl-demo" class="owl-carousel">
-            <a class="itemPhoto">
-                <img src="/static/img/lunbo3.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/lunbo1.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/lunbo2.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/fullimage1.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/fullimage2.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/fullimage3.jpg" alt="">
-            </a>
-            <a class="itemPhoto">
-                <img src="/static/img/fullimage4.jpg" alt="">
+            <a class="itemPhoto" v-for="(item,index) in lunboSrc" :key="index">
+                <img v-lazy="item" alt="">
             </a>
         </div>
     </div>
@@ -45,74 +27,14 @@
     <div class="classes mc">
         <a href="#" target="_blank">
             <span class="classLef">
-                <img src="/static/img/xb.JPG">
+                <img v-lazy="picUrl.xb">
             </span>
         </a>
         <div class="classRig">
-            <div class="classRigchild">
-                <a href="#" target="_blank">
+            <div v-for="(item,index) in [1,2]" :key="index">
+                <a href="#" target="_blank" v-for="(item,index) in [1,2,3]" :key="index">
                     <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-
-                <a href="#" target="_blank">
-                    <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-                <a href="#" target="_blank">
-                    <span class="classBox" style="margin-right: 0px;">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#" target="_blank">
-                    <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-
-                <a href="#" target="_blank">
-                    <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-                <a href="#" target="_blank">
-                    <span class="classBox" style="margin-right: 0px;">
-                        <img src="/static/img/class.JPG">
+                        <img v-lazy="picUrl.class">
                         <span class="className">课程名</span>
                         <span class="classTea">授课教师</span>
                         <span class="classPri">￥
@@ -128,37 +50,14 @@
     <div class="classes mc">
         <a href="#" target="_blank">
             <span class="classLef">
-                <img src="/static/img/xb.JPG">
+                <img v-lazy="picUrl.xb">
             </span>
         </a>
         <div class="classRig">
             <div class="classRigchild">
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" v-for="(item,index) in [1,2,3]" :key="index">
                     <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-
-                <a href="#" target="_blank">
-                    <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-                <a href="#" target="_blank">
-                    <span class="classBox" style="margin-right: 0px;">
-                        <img src="/static/img/class.JPG">
+                        <img v-lazy="picUrl.class">
                         <span class="className">课程名</span>
                         <span class="classTea">授课教师</span>
                         <span class="classPri">￥
@@ -170,32 +69,9 @@
             </div>
 
             <div>
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" v-for="(item,index) in [1,2,3]" :key="index">
                     <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-
-                <a href="#" target="_blank">
-                    <span class="classBox">
-                        <img src="/static/img/class.JPG">
-                        <span class="className">课程名</span>
-                        <span class="classTea">授课教师</span>
-                        <span class="classPri">￥
-                            <p>课程价格</p>
-                        </span>
-
-                    </span>
-                </a>
-                <a href="#" target="_blank">
-                    <span class="classBox" style="margin-right: 0px;">
-                        <img src="/static/img/class.JPG">
+                        <img v-lazy="picUrl.class">
                         <span class="className">课程名</span>
                         <span class="classTea">授课教师</span>
                         <span class="classPri">￥
@@ -263,7 +139,12 @@ export default {
                 src:"/static/img/class.JPG",
                 className:"课程名",
                 teacherName:"授课老师"
-            }]]
+            }]],
+            lunboSrc:["/static/img/lunbo1.jpg","/static/img/lunbo2.jpg","/static/img/lunbo3.jpg","/static/img/fullimage1.jpg","/static/img/fullimage2.jpg","/static/img/fullimage3.jpg"],
+            picUrl:{
+                class:'/static/img/class.JPG',
+                xb:'/static/img/xb.JPG'
+            }
         }
     },    
     mounted: function () {
