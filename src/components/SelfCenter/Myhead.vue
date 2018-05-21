@@ -51,7 +51,14 @@ export default {
             userid:'',
             ind:0,
             power:'',
-            stuBar:[{
+            stuBar:'',
+            teaBar:''
+        }
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+            if(sessionStorage.getItem('yzInfo')){
+            this.stuBar=[{
                 href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}`,
                 class:"fa fa-user",
                 text:"我的课程"
@@ -75,8 +82,8 @@ export default {
                 href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/news`,
                 class:"fa fa-newspaper-o",
                 text:"新闻资讯"
-            }],
-            teaBar:[{
+            }];
+            this.teaBar=[{
                 href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}`,
                 class:"fa fa-user",
                 text:"课程管理"
@@ -96,12 +103,7 @@ export default {
                 href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/skill`,
                 class:"fa fa-thumbs-up",
                 text:"能力档案"
-            }]
-        }
-    },
-    mounted: function () {
-        this.$nextTick(function () {
-            if(sessionStorage.getItem('yzInfo')){
+            }];
             let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
             this.picUrl=info1.headlogo;
             this.nickname=info1.nickname;
@@ -110,6 +112,13 @@ export default {
             this.userid=info1.userid;
             this.power=info1.power;
             }else{
+                this.$notify({
+          title: '非法操作',
+          message: '尚未登录...',
+          position: 'top-right',
+          type:'warning',
+          duration: 1000
+        });
                 this.$router.push({path:'/'});
             }
         })
@@ -118,6 +127,21 @@ export default {
       activeItem(index){
                 this.ind=index;
             }
+  },
+  watch:{
+    $route(to,from){
+      console.log(to,from);
+      if(to.params.id!==sessionStorage.getItem('yzInfo').userid){
+          this.$notify({
+          title: '非法操作',
+          message: '权限错误...',
+          position: 'top-right',
+          type:'warning',
+          duration: 1000
+        });
+                this.$router.push({path:'/'});
+      }
+    }
   }
 }
 </script>

@@ -106,6 +106,19 @@ export default {
     }
   },methods:{
         userLogin(username,password){
+            if(this.username&&this.password){
+            this.$options.methods.Notice.bind(this)({
+                title:'校验成功',
+                message:"登录中...",
+                type:'success',
+            });}else{
+            this.$options.methods.Notice.bind(this)({
+                title:'校验失败',
+                message:"请填写完整",
+                type:'error',
+            });
+            return false;
+            }
             console.log(username,password); 
             this.$http.get('/static/mock/infoData.json')
             .then((response) => {
@@ -125,14 +138,27 @@ export default {
             });       
         },
         userExit(){
+            this.$options.methods.Notice.bind(this)({
+                title:'已登出',
+                message:"部分功能将失效",
+                type:'success',
+            });
             this.isLogin=false;
             sessionStorage.removeItem('yzInfo');
             console.log(this.$route.path.indexOf('user')>-1);
             this.$route.path.indexOf('user')>-1?this.$router.push({path:'/'}):0;//其中login是你定义的一个路由模块
         },
+        Notice(obj){
+            this.$notify({
+          title: obj.title,
+          message: obj.message,
+          position: 'top-right',
+          type:obj.type,
+          duration: 1000
+        });
+        }
     },mounted: function () {
         this.$nextTick(function () {
-            console.log('judge login...');
             if(sessionStorage.getItem('yzInfo')){
             let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
             this.picUrl=info1.headlogo;

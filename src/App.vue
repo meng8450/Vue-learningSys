@@ -22,7 +22,7 @@ require('./assets/css/vue-dplayer.css');
 require('./assets/css/student-course.css');
 require('./assets/css/student-renwu.css');
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 

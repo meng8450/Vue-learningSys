@@ -97,7 +97,7 @@
         </div>
         <div class="classitem">
             <a href="#/lesson/1" target="_blank">
-                <img src="static/img/office.png">
+                <img v-lazy="src">
                 <span>
                     <h4>office高级应用</h4>
                     <p id="classSchool">成都信息工程大学</p>
@@ -109,7 +109,7 @@
         </div>
         <div class="classitem">
             <a href="#" target="_blank">
-                <img src="static/img/office.png">
+                <img v-lazy="src">
                 <span>
                     <h4>office高级应用</h4>
                     <p id="classSchool">成都信息工程大学</p>
@@ -121,7 +121,7 @@
         </div>
         <div class="classitem">
             <a href="#" target="_blank">
-                <img src="static/img/office.png">
+                <img v-lazy="src">
                 <span>
                     <h4>office高级应用</h4>
                     <p id="classSchool">成都信息工程大学</p>
@@ -135,7 +135,7 @@
     <div class="pagi mc">
         <ul class="pagination ">
             <li class="disabled">
-                <a href="#">&laquo</a>
+                <a href="#">&laquo;</a>
             </li>
             <li class="active">
                 <a href="#">1</a>
@@ -153,7 +153,7 @@
                 <a href="#">5</a>
             </li>
             <li>
-                <a href="#">&raquo</a>
+                <a href="#">&raquo;</a>
             </li>
         </ul>
     </div>
@@ -164,3 +164,12 @@
     text-align: left;
 }
 </style>
+<script>
+    export default {
+        data(){
+            return {
+                src:'static/img/office.png'
+            }
+        }
+    }
+</script>
