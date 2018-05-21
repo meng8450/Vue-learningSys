@@ -148,10 +148,11 @@ export default {
         }
     },    
     mounted: function () {
-    $('#owl-demo').owlCarousel({
-                    items: 1,
-                    autoPlay: true
-                });                
+        this.$nextTick(function(){
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            autoPlay: true
+        })})                
   }
 }
 

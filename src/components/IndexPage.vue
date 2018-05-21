@@ -346,9 +346,29 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 b, strong {
     /* font-weight: bold; */
     word-break: keep-all!important;
+}
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+    line-height: 550px;
+    height: 550px;
+}
+.carousel-control .left:hover {
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-repeat: repeat-x; */
+    background: black!important;
 }
 </style>

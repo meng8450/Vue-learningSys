@@ -119,7 +119,8 @@ export default {
           type:'warning',
           duration: 1000
         });
-                this.$router.push({path:'/'});
+                // this.$router.push({path:'/'});
+                history.go(-1);
             }
         })
   },
@@ -131,7 +132,7 @@ export default {
   watch:{
     $route(to,from){
       console.log(to,from);
-      if(to.params.id!==sessionStorage.getItem('yzInfo').userid){
+      if(to.params.id!==JSON.parse(sessionStorage.getItem('yzInfo')).userid){
           this.$notify({
           title: '非法操作',
           message: '权限错误...',
@@ -139,7 +140,7 @@ export default {
           type:'warning',
           duration: 1000
         });
-                this.$router.push({path:'/'});
+            this.$router.push({path:'/'});
       }
     }
   }

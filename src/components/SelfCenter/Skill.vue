@@ -10,7 +10,7 @@
                 <span>超越14%的用户</span>
             </div>
         </div>
-        <h>已完成的课程</h>
+            <h5>已完成的课程</h5>
         <div class="course-img">
             <a href="#" target="_blank">
                 <img width="200" height="113" alt="Pscc全面技能培训" src="static\img\course2.png">

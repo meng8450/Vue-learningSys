@@ -7,7 +7,6 @@ import RightNavbar from '@/components/CircleNavbar/RightNavbar'
 import VueResource from 'vue-resource';
 import VueLazyload from 'vue-lazyload';
 import { Notification } from 'element-ui';
-
 Vue.prototype.$notify = Notification;
 Vue.use(VueLazyload);
 Vue.use(VueResource);
