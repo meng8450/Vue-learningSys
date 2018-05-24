@@ -1,8 +1,6 @@
 # 云智教育
 
-> A Vue.js project
-
-## Build Setup
+> 创新实践
 
 ``` bash
 # install dependencies
@@ -18,4 +16,18 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- test accounts
+> teacher: admin
+> student: test
+
+- dependencies
+
+```
+"dplayer": "^1.22.2",
+"element-ui": "^2.3.9",
+"npm": "^6.0.1",
+"vue": "^2.5.2",
+"vue-dplayer": "0.0.9",
+"vue-resource": "^1.5.0",
+"vue-router": "^3.0.1"
+```
