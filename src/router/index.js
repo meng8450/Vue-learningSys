@@ -27,7 +27,12 @@ import Mission from '@/components/SelfCenter/Mission'
 import Grade from '@/components/SelfCenter/Grade'
 import Skill from '@/components/SelfCenter/Skill'
 import News from '@/components/SelfCenter/News'
-import Setting from '@/components/SelfCenter/Setting'
+//个人设置
+import SettingNavbar from '@/components/SelfCenter/Setting/SettingNavbar'
+import SetUp from '@/components/SelfCenter/Setting/SetUp'
+import Binding from '@/components/SelfCenter/Setting/Binding'
+import Identity from '@/components/SelfCenter/Setting/Identity'
+
 const index = r => require.ensure([], () => r(require('@/components/IndexPage')))
 Vue.use(Router)
 export default new Router({
@@ -97,7 +102,7 @@ export default new Router({
       components:{
         nav: Navbar,
         body: Page404,
-
+        footer: Footer
       }
     }, {
       path: '/user/:id', components: {
@@ -139,13 +144,33 @@ export default new Router({
           // Setting 会被渲染在 Myhead 的 <router-view> 中
           path: 'news',
           component: News
+        }
+      ]
+    },{
+      path: '/user/:id',
+      components: {
+        nav: Navbar,
+        body: SettingNavbar,
+        footer:Footer
+      },
+      children: [
+        {
+          path: 'setting',
+          component: SetUp
         },
         {
-          // 当 /user/:id/setting 匹配成功
-          // Setting 会被渲染在 Myhead 的 <router-view> 中
-          path: 'setting',
-          component: Setting
-        }
+          // 当 /user/:id/profile 匹配成功，
+          // UserProfile 会被渲染在 User 的 <router-view> 中
+          path: 'binding',
+          component: Binding
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'identity',
+          component: Identity
+        },
+        
       ]
     },
     { path: '*', redirect: '/404' }//重定向

@@ -34,7 +34,7 @@
         </div>
         <ul>
             <li v-for="(nav,index) in navBar" :key="index">
-                <a href="#" ><router-link :to="nav.path">{{nav.text}}</router-link></a>
+                <router-link :to="nav.path">{{nav.text}}</router-link>
             </li>
         </ul>
         <form action="" method="get" class="input-group">
@@ -64,7 +64,7 @@
                 <a href="#" id="nickname">{{nickname}}
                     <div class="list">
                     <ul>
-                        <li><a :href="'#/user/'+userid">个人中心</a></li> 
+                        <li><a :href="'#/user/'+userid+'/'">个人中心</a></li> 
                         <li><a :href="'#/user/'+userid+'/setting'">设置</a></li>
                     </ul>
                 </div>
@@ -88,10 +88,10 @@ export default {
           path:'/',
           text:'首页'
       },{
-          path:'/classes',
+          path:'/classes/',
           text:'课程'
       },{
-          path:'/circle',
+          path:'/circle/',
           text:'学友圈'
       },{
           path:'/',

@@ -366,9 +366,10 @@ b, strong {
     line-height: 550px;
     height: 550px;
 }
-.carousel-control .left:hover {
-    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, .0001) 100%);
-    background-repeat: repeat-x; */
+.carousel-control .left:hover{
+    background: black!important;
+}
+.carousel-control .right:hover{
     background: black!important;
 }
 </style>

@@ -23,16 +23,16 @@
         <div class="left-span">
             <ul>
                 <li v-for="(item,index) in stuBar" v-if="power==='0'" :key="index">
-                    <a :href="item.href" @click="activeItem(index)" :class="{'active':ind===index}">
+                    <router-link :to="item.href">
                         <i :class="item.class"></i>
                         <span>{{item.text}}</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li v-for="(item,index) in teaBar" v-if="power==='1'" :key="index">
-                    <a :href="item.href" @click="activeItem(index)" :class="{'active':ind===index}">
+                    <router-link :to="item.href">
                         <i :class="item.class"></i>
                         <span>{{item.text}}</span>
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -51,59 +51,57 @@ export default {
             userid:'',
             ind:0,
             power:'',
-            stuBar:'',
-            teaBar:''
+            stuBar:[{
+                href:'./',
+                class:"fa fa-user",
+                text:"我的课程"
+            },{
+                href:'./work',
+                class:"fa fa-flask",
+                text:"综合实训"
+            },{
+                href:'./mission',
+                class:"fa fa-clipboard",
+                text:"我的任务"
+            },{
+                href:'./grade',
+                class:"fa fa-search",
+                text:"成绩查询"
+            },{
+                href:'./skill',
+                class:"fa fa-thumbs-up",
+                text:"能力档案"
+            },{
+                href:'./news',
+                class:"fa fa-newspaper-o",
+                text:"新闻资讯"
+            }],
+            teaBar:[{
+                href:'./',
+                class:"fa fa-user",
+                text:"课程管理"
+            },{
+                href:'./work',
+                class:"fa fa-flask",
+                text:"综合实训"
+            },{
+                href:'./mission',
+                class:"fa fa-clipboard",
+                text:"任务管理"
+            },{
+                href:'./grade',
+                class:"fa fa-search",
+                text:"数据分析"
+            },{
+                href:'./skill',
+                class:"fa fa-thumbs-up",
+                text:"能力档案"
+            }]
         }
     },
     mounted: function () {
         this.$nextTick(function () {
             if(sessionStorage.getItem('yzInfo')){
-            this.stuBar=[{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}`,
-                class:"fa fa-user",
-                text:"我的课程"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/work`,
-                class:"fa fa-flask",
-                text:"综合实训"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/mission`,
-                class:"fa fa-clipboard",
-                text:"我的任务"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/grade`,
-                class:"fa fa-search",
-                text:"成绩查询"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/skill`,
-                class:"fa fa-thumbs-up",
-                text:"能力档案"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/news`,
-                class:"fa fa-newspaper-o",
-                text:"新闻资讯"
-            }];
-            this.teaBar=[{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}`,
-                class:"fa fa-user",
-                text:"课程管理"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/work`,
-                class:"fa fa-flask",
-                text:"综合实训"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/mission`,
-                class:"fa fa-clipboard",
-                text:"任务管理"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/grade`,
-                class:"fa fa-search",
-                text:"数据分析"
-            },{
-                href:`#/user/${JSON.parse(sessionStorage.getItem('yzInfo')).userid}/skill`,
-                class:"fa fa-thumbs-up",
-                text:"能力档案"
-            }];
             let info1=JSON.parse(sessionStorage.getItem('yzInfo'));
             this.picUrl=info1.headlogo;
             this.nickname=info1.nickname;
@@ -123,11 +121,6 @@ export default {
                 history.go(-1);
             }
         })
-  },
-  methods:{
-      activeItem(index){
-                this.ind=index;
-            }
   },
   watch:{
     $route(to,from){
@@ -150,15 +143,16 @@ export default {
 .main{
     min-height: 100vh!important;
 }
-.active{
-    color: #fff;
-    background: #99CCFF;
-    border-radius: 8px 0 0 8px;
-}
+
 .fade-enter-active, .fade-leave-active {
         transition: opacity .5s
       }
       .fade-enter, .fade-leave-active {
         opacity: 0
+      }
+      #user .router-link-exact-active{
+        color: #fff;
+        background: #48cfad!important;
+        border-radius: 8px 0 0 8px;
       }
 </style>
