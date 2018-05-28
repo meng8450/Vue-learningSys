@@ -60,8 +60,11 @@
     </div>
     </div>
 </template>
-<style>
+<style scoped>
 #stusign{
     min-height: 450px;
+}
+.footer{
+    bottom: 0;
 }
 </style>

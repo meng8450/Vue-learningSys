@@ -25,6 +25,8 @@
     background: #48cfad;
     padding-top: 12px;
     font-weight: lighter;
+    height: 100px;
+    bottom: 0;
 }
 .footer a{
   color: white;

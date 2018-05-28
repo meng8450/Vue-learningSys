@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <transition name="fade"><router-view name="body"/></transition>
+    <transition name="fade" mode="out-in"><router-view name="body"/></transition>
     <footer-part></footer-part>
   </div>
 </template>
@@ -38,6 +38,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height: 100vh;
+
+    /*保证footer是相对于container位置绝对定位*/
+    position:relative;  
+
+    /*设置padding-bottom值大于等于footer的height值，以保证main的内容能够全部显示出来而不被footer遮盖；*/  
+    padding-bottom: 100px;  
+    box-sizing: border-box;
+
 }
 .fade-enter-active, .fade-leave-active {
         transition: opacity .5s
