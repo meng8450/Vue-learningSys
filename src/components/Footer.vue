@@ -19,18 +19,19 @@
 </template>
 <style>
 .footer{
-    position: relative;
+    position: absolute;
     margin-top: 30px;
     color: white;
-    height: 100%;
     background: #48cfad;
     padding-top: 12px;
     font-weight: lighter;
-    padding-bottom: 12px;
 }
 .footer a{
   color: white;
 }
 </style>
 <script>
+export default {
+  name:'footerPart'
+}
 </script>

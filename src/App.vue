@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <transition name="fade"><router-view class="view one" name="nav"/></transition>
-    <transition name="fade"><router-view class="view two" name="body"/></transition>
-    <transition name="fade"><router-view class="view three" name="footer"/></transition>
+    <nav-bar></nav-bar>
+    <transition name="fade"><router-view name="body"/></transition>
+    <footer-part></footer-part>
   </div>
 </template>
 
 <script>
+import footerPart from './components/Footer';
+import navBar from './components/Navbar'
 require("./assets/css/signup.css");
 require("./assets/css/hot.css");
 require("./assets/css/paper.css");
@@ -23,6 +25,9 @@ require('./assets/css/student-course.css');
 require('./assets/css/student-renwu.css');
 export default {
   name: 'App',
+  components:{
+    footerPart,navBar
+  }
 }
 </script>
 
