@@ -163,6 +163,20 @@
 #schoolClass{
     text-align: left;
 }
+.class-Fliter td{
+    transition: .3s ease-in-out;
+    background: #76e4c8;
+}
+.class-Fliter td a{
+    color: white;
+}
+.class-Fliter td:hover{
+    background: #4bd6b3;
+    transition: .3s ease-in-out;
+}
+.class-Fliter td:hover a{
+    color: #fff;
+}
 </style>
 <script>
     export default {
