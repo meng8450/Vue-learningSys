@@ -15,7 +15,12 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
+- local api server
+```
+cd server
+npm install
+npm start||node server.js
+```
 - test accounts
 > teacher: admin
 > student: test
