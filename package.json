@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "dplayer": "^1.22.2",
     "element-ui": "^2.3.9",
     "npm": "^6.0.1",
