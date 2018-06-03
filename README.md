@@ -18,8 +18,7 @@ npm run build --report
 - local api server
 ```
 cd server
-npm install
-npm start||node server.js
+node server.js
 ```
 - test accounts
 > teacher: admin
