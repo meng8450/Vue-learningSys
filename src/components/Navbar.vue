@@ -106,7 +106,7 @@ export default {
     }
   },methods:{
         userLogin(username,password){
-            this.$api.login();
+            //this.$api.login(username,password);
             if(this.username&&this.password){
             this.$options.methods.Notice.bind(this)({
                 title:'校验成功',

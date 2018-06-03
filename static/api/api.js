@@ -5,7 +5,11 @@ import config from './config'
  * 登录
  */
 let login= function (username, password) {
-    axios.get(config.loginUrl)
+    axios.get(config.loginUrl, {
+        params: {
+            username: username
+        }
+    })
         .then(function (res) {
             console.log(res.data);
         })

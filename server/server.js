@@ -37,7 +37,13 @@ router.route('/login')
 
     // 创建一条bear (用 POST动词访问uri http://localhost:8080/api/bears)
     .get(function (req, res) {
-     res.json({ status: 200,msg:'success!',data:[] });
+        console.log(req.query);
+        if (req.query.username === 'admin' || req.query.username === 'test'){
+            res.json({ status: 200, msg: 'success!', data: [] });
+        }else{
+            res.json({ status: 201, msg: 'error!', data: [] });
+        }
+     
         });
 
 // 所有的路由会加上“／api”前缀
