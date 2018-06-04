@@ -106,7 +106,7 @@ export default {
     }
   },methods:{
         userLogin(username,password){
-            //this.$api.login(username,password);
+            this.$api.login(username,password);
             if(this.username&&this.password){
             this.$options.methods.Notice.bind(this)({
                 title:'校验成功',
@@ -155,7 +155,8 @@ export default {
           message: obj.message,
           position: 'top-right',
           type:obj.type,
-          duration: 1000
+          duration: 1000,
+          offset: 50
         });
         }
     },mounted: function () {
