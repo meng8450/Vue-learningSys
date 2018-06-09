@@ -15,7 +15,7 @@ ul{list-style: none;}
 .w99{width:99%}
 .fcw{color:#fff;}
 
-.zhiding{cursor:pointer;z-index:9999;width: 25px;height: 25px;position: fixed;right: 25px; bottom: 50px; background:url(../img/zhid.png) no-repeat; background-size: contain;display: block;}
+.zhiding{cursor:pointer;z-index:9999;width: 25px;height: 25px;position: fixed;right: 25px; bottom: 50px; background:url(../../../static/img/zhid.png) no-repeat; background-size: contain;display: block;}
 .header{overflow: hidden; height:52px; background-color:#fff;padding-right: 10px;z-index: 900;box-shadow: 0 4px 8px 0 rgba(7,17,27,0.1); position:relative;}
 .logo{margin: 0 18px 0 40px; float:left;width:150px;}
 .logo a{ display:block; width: auto; height:52px; line-height:52px; }
@@ -25,7 +25,7 @@ ul{list-style: none;}
 .serch{width:250px;  margin-top:7px; float:left;margin-left:80px}
 .serch input{border:none; border-bottom:1px solid #848484; box-shadow:none;}
 .serchBu{ float:left;width:40px; margin-top:12px;}
-.serchBu input{ background:url(../img/serch.png) no-repeat; background-size:cover; border:none; margin-left:3px;}
+.serchBu input{ background:url(../../../static/img/serch.png) no-repeat; background-size:cover; border:none; margin-left:3px;}
 .input-group{float:left;}
 #userPhoto{ width:30px; height:30px; float:left; position:absolute; right:120px; margin-top:10px; }
 .login{width:100px; float:left; height:52px; line-height:52px; margin-left:30px; font-size:11px; position:absolute; right:20px;}
@@ -57,8 +57,8 @@ ul{list-style: none;}
     margin-top: 30px;
     position: relative;}
 .lessonAdv span{text-align: center; display: inline-block; width: 400px; height: 70px;   border-radius: 8px; background-size: cover;filter:alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity:0.6;opacity: 0.6;}
-.lessonAdv1{background: url(../img/lessonadv1.jpg) no-repeat;position: absolute;left: 0;}
-.lessonAdv2{background: url(../img/lessonadv2.jpg) no-repeat;position: absolute;right: 0px;}
+.lessonAdv1{background: url(../../../static/img/lessonadv1.jpg) no-repeat;position: absolute;left: 0;}
+.lessonAdv2{background: url(../../../static/img/lessonadv2.jpg) no-repeat;position: absolute;right: 0px;}
 .newsBox{width: 850px;height: 150px; margin-bottom: 20px;}
 .newsImg img{width:250px;height: 150px; display:block;float: left;margin-right: 20px;}
 .newsText{height:180px;width:580px;display: block;float:left;word-wrap: break-word;}

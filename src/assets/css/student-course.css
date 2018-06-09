@@ -28,7 +28,7 @@ div {
 .serch{width:250px;  margin-top:7px; float:left;margin-left:80px}
 .serch input{border:none; border-bottom:1px solid #848484; box-shadow:none;}
 .serchBu{ float:left;width:40px; margin-top:12px;}
-.serchBu input{ background:url(../img/search.png) no-repeat; background-size:cover; border:none; margin-left:3px;}
+.serchBu input{ background:url(../../../static/img/search.png) no-repeat; background-size:cover; border:none; margin-left:3px;}
 .input-group{float:left;}
 #userPhoto{ width:30px; height:30px; float:left; position:absolute; right:120px; margin-top:10px; }
 .login{width:100px; float:left; height:52px; line-height:52px; margin-left:30px; font-size:11px; position:absolute; right:20px;}
@@ -37,7 +37,7 @@ div {
 .myheader{
     width: 100%;
     height:120px; 
-    background: url(../img/back.png)center top no-repeat; 
+    background: url(../../../static/img/back.png)center top no-repeat; 
     background-size: cover;
      /* background-color: brown;  */
 }

@@ -3,7 +3,7 @@
 .bgcY{background: #48cfad;}
 .bgcG{background: gainsboro;}
 #signBg {
-    background: url(../img/signupbcg.jpg) no-repeat;
+    background: url(../../../static/img/signupbcg.jpg) no-repeat;
     height: 100vh;
     background-size: cover;
     position: relative;
