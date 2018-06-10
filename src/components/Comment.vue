@@ -2,8 +2,8 @@
     <div id="comment">
                 <div class="comments">
     <comment-grid 
-  baseURL="comment-f5318.firebaseapp.com"
-  apiKey="AIzaSyDZRsoU6e9eiCqEFtZng3lBlwjNIg3CNKE"
+  baseURL=""
+  apiKey=""
   nodeName="comment">
 </comment-grid>
   </div>
