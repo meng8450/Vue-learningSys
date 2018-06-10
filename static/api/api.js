@@ -7,7 +7,8 @@ import config from './config'
 let login= function (username, password) {
     axios.get(config.loginUrl, {
         params: {
-            username: username
+            username: username,
+            password: password
         }
     })
         .then(function (res) {

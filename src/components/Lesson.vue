@@ -41,27 +41,29 @@
             <p></p>
             <h4>参考资料</h4>
             <p></p>
-
         </div>
     </div>
+    <vue-comment></vue-comment>
   </div>
 </template>
 <script>
+import Vue from 'vue'
 import VueDPlayer from 'vue-dplayer'
+import VueComment from './Comment'
 export default {
   name: 'Lesson',
   data () {
     return {
         options: {
           video: {
-            url: 'http://odwup6q5f.bkt.clouddn.com/Westworld.mp4',
-            pic: ''
+            url: 'http://p9wmpwieh.bkt.clouddn.com/SAND%20IN%20THE%20SKY.mp4',
+            pic: 'http://p9wmpwieh.bkt.clouddn.com/cover.png'
           },
           autoplay: false,
           contextmenu: [
               {
                   text: 'GitHub',
-                  link: 'https://github.com/MoePlayer/vue-dplayer'
+                  link: 'https://github.com/fatdoge'
               }
           ]
         },
@@ -76,7 +78,8 @@ export default {
         console.log('play callback')
       }},
   components: {
-    'd-player': VueDPlayer
+    'd-player': VueDPlayer,
+    'vue-comment':VueComment
   }
 }
 </script>
