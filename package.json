@@ -13,6 +13,7 @@
     "axios": "^0.18.0",
     "dplayer": "^1.22.2",
     "element-ui": "^2.3.9",
+    "eslint": "^5.0.1",
     "npm": "^6.0.1",
     "vue": "^2.5.2",
     "vue-comment-grid": "^1.0.11",

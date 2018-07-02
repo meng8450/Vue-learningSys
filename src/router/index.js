@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import IndexPage from '@/components/IndexPage'
 import Footer from '@/components/Footer'
 import Classes from '@/components/Classes'
+import Training from '@/components/Training'
 //学友圈二级导航
 import SecondNavbar from '@/components/CircleNavbar/SecondNavbar'
 import Commend from '@/components/CircleNavbar/Commend'
@@ -17,7 +18,7 @@ import Lesson from '@/components/Lesson'
 import StuSign from '@/components/Signup/StuSign'
 import TeaSign from '@/components/Signup/TeaSign'
 //404
-import Page404 from '@/components/404/Page404'
+// import Page404 from '@/components/404/Page404'
 //个人中心首页
 import Myhead from '@/components/SelfCenter/Myhead'
 //个人中心二级组件
@@ -68,7 +69,8 @@ export default new Router({
 
         // ...其他子路由
       ]
-    }, {
+    }
+    , {
       path: '/schoolclass',
       components: {
         nav: Navbar,
@@ -98,10 +100,10 @@ export default new Router({
         footer: Footer
       }
     },{
-      path:'/404',
+      path:'/training',
       components:{
         nav: Navbar,
-        body: Page404,
+        body: Training,
         footer: Footer
       }
     }, {

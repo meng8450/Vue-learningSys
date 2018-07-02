@@ -94,7 +94,7 @@ export default {
           path:'/circle/',
           text:'学友圈'
       },{
-          path:'/',
+          path:'/training/',
           text:'实训'
       }],
       username:'',
